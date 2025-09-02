@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dev.greenadine</groupId>
+        <artifactId>checks-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>checks</artifactId>
+    <version>1.0.0-21</version>
+    <name>Checks</name>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.deploy.skip>false</maven.deploy.skip>
+    </properties>
+
+</project>

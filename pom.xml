@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.greenadine</groupId>
+    <artifactId>checks-parent</artifactId>
+    <version>1.0.0</version>
+    <name>Checks</name>
+    <packaging>pom</packaging>
+
+    <developers>
+        <developer>
+            <name>Greenadine</name>
+            <email>contact@greenadine.dev</email>
+            <url>https://greenadine.dev</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>greenadine-releases</id>
+            <url>https://repo.greenadine.dev/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>greenadine-snapshots</id>
+            <url>https://repo.greenadine.dev/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencies>
+        <!-- JetBrains Annotations -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>26.0.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- License -->
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>4.6</version>
+                    <configuration>
+                        <properties>
+                            <year>2025</year>
+                            <owner>Greenadine</owner>
+                            <website>greenadine.dev</website>
+                        </properties>
+                        <licenseSets>
+                            <licenseSet>
+                                <header>LICENSE_HEADER.txt</header>
+                                <includes>
+                                    <include>**/src/main/**/*.java</include>
+                                </includes>
+                            </licenseSet>
+                        </licenseSets>
+                    </configuration>
+                </plugin>
+
+                <!-- Javadoc -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.11.2</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <show>public</show>
+                        <windowtitle>${project.name} Javadocs</windowtitle>
+                        <doctitle>${project.name} &amp;ndash; Version ${project.parent.version}</doctitle>
+                        <bottom><![CDATA[Copyright © 2025 Greenadine, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a>.]]></bottom>
+                        <stylesheetfile>stylesheet.css</stylesheetfile>
+                        <charset>UTF-8</charset>
+                        <encoding>UTF-8</encoding>
+                        <docencoding>UTF-8</docencoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>21</module>
+        <module>11</module>
+    </modules>
+
+</project>

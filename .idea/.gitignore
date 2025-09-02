@@ -1,0 +1,10 @@
+# Directories
+/shelf/
+/codeStyles/
+
+# XML files
+*.xml
+!compiler.xml
+!jarRepositories.xml
+!misc.xml
+!vcs.xml

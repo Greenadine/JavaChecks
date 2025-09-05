@@ -66,7 +66,7 @@ Checks.check(object != null, IllegalStateException::new, "Object is null");
 ```xml
 <dependency>
     <groupId>dev.greenadine</groupId>
-    <artifactId>checks-21</artifactId>
+    <artifactId>checks</artifactId>
     <version>1.0.0-21</version>
 </dependency>
 ```
@@ -75,7 +75,7 @@ Checks.check(object != null, IllegalStateException::new, "Object is null");
 ```xml
 <dependency>
     <groupId>dev.greenadine</groupId>
-    <artifactId>checks-11</artifactId>
+    <artifactId>checks</artifactId>
     <version>1.0.0-11</version>
 </dependency>
 ```
